@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "VertigoGamesAssignment": {
+      "commandName": "Project",
+      "commandLineArgs": "--help"
+    }
+  }
+}
