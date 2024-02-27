@@ -9,6 +9,7 @@ internal class Program
     {
         Catalogue catalogue = new();
         ShoppingCart shoppingCart = new();
-        new CatalogueMenu(catalogue, shoppingCart).Show();
+
+        new MainMenu(catalogue, shoppingCart).Show();
     }
 }

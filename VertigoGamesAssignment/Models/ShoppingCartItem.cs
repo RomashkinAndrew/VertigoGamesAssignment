@@ -8,22 +8,10 @@ internal class ShoppingCartItem
 
     public string PropertyString => Properties.Length == 0 ? "" : string.Join(", ", Properties.Select(x => x.Name + ": " + x.Value));
 
-    public class Property
-    {
-        public string Name { get; set; }
-        public string Value { get; set; }
-
-        public Property(string name, string value)
-        {
-            Name = name;
-            Value = value;
-        }
-    }
-
     public ShoppingCartItem(Item item, int count = 1)
     {
         Item = item;
         Count = count;
-        Properties = item.Properties.Select(x => new Property(x.Name, x.PossibleValues[0])).ToArray();
+        Properties = item.Properties.Select(x => new Property(x.Name, x.PossibleValues[0], x.PossibleValues)).ToArray();
     }
 }

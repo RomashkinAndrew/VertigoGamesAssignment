@@ -1,10 +1,21 @@
 ﻿namespace VertigoGamesAssignment.Models;
 internal class ShoppingCart
 {
-    public ShoppingCartItem[] Items { get; set; } = Array.Empty<ShoppingCartItem>();
+    readonly List<ShoppingCartItem> items = new();
+    public ShoppingCartItem[] Items => items.ToArray();
 
     public void Add(ShoppingCartItem item)
     {
-        Items = Items.Where(x => x.Item == item.Item).Append(item).ToArray();
+        items.Add(item);
+    }
+
+    public void Remove(ShoppingCartItem item)
+    {
+        items.Remove(item);
+    }
+
+    public void Clear()
+    {
+        items.Clear();
     }
 }

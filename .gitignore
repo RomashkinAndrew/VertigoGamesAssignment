@@ -6,3 +6,5 @@
 /UnitTests/bin
 /VertigoGamesAssignment/bin
 /VertigoGamesAssignment/obj
+.vs
+/VertigoGamesAssignment/VertigoGamesAssignment.csproj.user
