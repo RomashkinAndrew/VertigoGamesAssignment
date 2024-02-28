@@ -9,4 +9,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("VertigoGamesAssignment")]
 [assembly: AssemblyTitle("VertigoGamesAssignment")]
 
-[assembly: AssemblyVersion("0.5.1")] 
+[assembly: AssemblyVersion("0.5.1")]

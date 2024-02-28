@@ -42,16 +42,16 @@ internal class ShoppingCartMenu : Menu
                     Show();
                 }
             });
-        }
 
-        yield return new ChoiceSelectionItem("Clear shopping cart", ()=>
-        {
-            if (AnsiConsole.Confirm("[yellow][bold]Are you sure you want to clear your shopping cart?[/][/]"))
+            yield return new ChoiceSelectionItem("Clear shopping cart", () =>
             {
-                shoppingCart.Clear();
-            }
-            AnsiConsole.Clear();
-        });
+                if (AnsiConsole.Confirm("[yellow][bold]Are you sure you want to clear your shopping cart?[/][/]"))
+                {
+                    shoppingCart.Clear();
+                }
+                AnsiConsole.Clear();
+            });
+        }
 
         yield return new ChoiceSelectionItem("Back to main menu", NavigationAction.Back);
     }

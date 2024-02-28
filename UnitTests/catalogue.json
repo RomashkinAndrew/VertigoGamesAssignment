@@ -1,0 +1,142 @@
+{
+    "$id": "1",
+    "Categories": [{
+            "$id": "2",
+            "Name": "Clothes",
+            "ParentCategory": null
+        }, {
+            "$id": "3",
+            "Name": "Shoes",
+            "ParentCategory": null
+        }, {
+            "$id": "4",
+            "Name": "Jackets",
+            "ParentCategory": {
+                "$ref": "2"
+            }
+        }, {
+            "$id": "5",
+            "Name": "Hoodies",
+            "ParentCategory": {
+                "$ref": "2"
+            }
+        }, {
+            "$id": "6",
+            "Name": "Dresses",
+            "ParentCategory": {
+                "$ref": "2"
+            }
+        }
+    ],
+    "Items": [{
+            "$id": "7",
+            "Name": "Sneakers",
+            "Category": {
+                "$ref": "3"
+            },
+            "Description": "Sneakers with a padded upper edge and tongue and lacing at front. Leather lining, leather insoles, and patterned rubber soles. Sole thickness approx. 1 1/2 in.",
+            "Price": 51.53,
+            "Properties": [{
+                    "Name": "Size",
+                    "PossibleValues": ["40", "41", "42", "43"]
+                }, {
+                    "Name": "Color",
+                    "PossibleValues": ["Red", "Blue", "Green"]
+                }
+            ]
+        }, {
+            "$id": "8",
+            "Name": "Sandals",
+            "Category": {
+                "$ref": "3"
+            },
+            "Description": "Slides in soft leather with adjustable straps. Molded suede insoles and patterned soles.",
+            "Price": 22.0,
+            "Properties": [{
+                    "Name": "Size",
+                    "PossibleValues": ["40", "41", "42", "43"]
+                }, {
+                    "Name": "Color",
+                    "PossibleValues": ["Red", "Blue", "Black"]
+                }
+            ]
+        }, {
+            "$id": "9",
+            "Name": "Straw Hat",
+            "Category": {
+                "$ref": "2"
+            },
+            "Description": "Hat in braided paper straw. Rounded crown and a wide, flat brim. Grosgrain sweatband.",
+            "Price": 13.0,
+            "Properties": [{
+                    "Name": "Color",
+                    "PossibleValues": ["Red", "Blue", "Green"]
+                }
+            ]
+        }, {
+            "$id": "12",
+            "Name": "Jersey",
+            "Category": {
+                "$ref": "4"
+            },
+            "Description": "Regular-fit, comfortable jacket in bouclé jersey with classic silhouette. Collar, zipper at front, welt front pockets, and long sleeves. Unlined.",
+            "Price": 111.72,
+            "Properties": [{
+                    "Name": "Size",
+                    "PossibleValues": ["S", "M", "L", "XL"]
+                }, {
+                    "Name": "Color",
+                    "PossibleValues": ["Red", "Blue", "Green"]
+                }
+            ]
+        }, {
+            "$id": "13",
+            "Name": "Trench coat",
+            "Category": {
+                "$ref": "4"
+            },
+            "Description": "Oversized, knee-length trench coat in woven fabric with a baggy, extra-loose silhouette. Notched lapels, buttons at front, and a removable tie belt at waist. Long sleeves with adjustable tab at cuffs, welt side pockets, and two inner pockets. Vent at back. Lined.",
+            "Price": 130.0,
+            "Properties": [{
+                    "Name": "Size",
+                    "PossibleValues": ["S", "M", "L", "XL"]
+                }, {
+                    "Name": "Color",
+                    "PossibleValues": ["Red", "Blue", "Green"]
+                }
+            ]
+        }, {
+            "$id": "14",
+            "Name": "Hoodie",
+            "Category": {
+                "$ref": "5"
+            },
+            "Description": "Long-sleeved sweatshirt hoodie with soft, brushed inside. Jersey-lined hood, dropped shoulders, and ribbing at cuffs and hem.",
+            "Price": 37.05,
+            "Properties": [{
+                    "Name": "Size",
+                    "PossibleValues": ["S", "M", "L", "XL", "XXL", "XXXL"]
+                }, {
+                    "Name": "Color",
+                    "PossibleValues": ["Red", "Blue", "Green"]
+                }
+            ]
+        }, {
+            "$id": "15",
+            "Name": "Cotton Dress",
+            "Category": {
+                "$ref": "6"
+            },
+            "Description": "Loose-fit, knee-length, A-line dress in woven cotton fabric. Round neckline with V-shaped opening and narrow ties at front. Gently dropped shoulders, long, voluminous sleeves with a gathered seam at top, and narrow elastic at cuffs. Gathered seam at lower section for added volume. Unlined.",
+            "Price": 45.03,
+            "Properties": [{
+                    "Name": "Size",
+                    "PossibleValues": ["XS", "S", "M"]
+                }, {
+                    "Name": "Color",
+                    "PossibleValues": ["Red", "Blue", "Green"]
+                }
+            ]
+        }
+    ]
+}

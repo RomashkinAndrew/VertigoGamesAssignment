@@ -7,11 +7,12 @@ internal static class MiscMenus
 {
     public static void Exit()
     {
-        bool exit = AnsiConsole.Confirm("[lime][bold]Are you sure you want to exit?[/][/]");
+        bool exit = AnsiConsole.Confirm("[yellow]Are you sure you want to exit?[/]");
         AnsiConsole.Clear();
         if (exit)
         {
-            AnsiConsole.WriteLine("Until next time!");
+            AnsiConsole.MarkupLine("[lime]Until next time![/]");
+            AnsiConsole.MarkupLine($"[grey]Press any key to exit[/]");
             AnsiConsole.Console.Input.ReadKey(false);
             Environment.Exit(0);
         }
@@ -23,7 +24,7 @@ internal static class MiscMenus
         while (true)
         {
             AnsiConsole.MarkupLine($"[lime][bold]==========================Select [red]{item.Item.Name}[/] count==========================[/][/]");
-            AnsiConsole.MarkupLine($"                                             [blue][bold]{item.Count}[/][/]");
+            AnsiConsole.MarkupLine($"[blue][bold]<------------------------------------{item.Count}-------------------------------------->[/][/]");
             AnsiConsole.MarkupLine($"[grey]Use left/right arrow to adjust count, Enter to confirm[/]");
             ConsoleKeyInfo? key = AnsiConsole.Console.Input.ReadKey(false);
             AnsiConsole.Clear();

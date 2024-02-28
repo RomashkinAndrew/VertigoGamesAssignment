@@ -1,17 +1,18 @@
 ﻿namespace VertigoGamesAssignment.Models;
 
+[Serializable]
 internal class Item
 {
-    public string Name { get; private set; }
-    public Category Category { get; private set; }
-    public string? Description { get; private set; }
-    public double Price { get; private set; }
-    public Property[] Properties { get; private set; }
+    public string Name { get; }
+    public Category? Category { get; }
+    public string? Description { get; }
+    public double Price { get; }
+    public Property[] Properties { get; }
 
     public class Property
     {
-        public string Name { get; private set; }
-        public string[] PossibleValues { get; private set; }
+        public string Name { get; }
+        public string[] PossibleValues { get; }
 
         public Property(string name, params string[] possibleValues)
         {
@@ -20,7 +21,7 @@ internal class Item
         }
     }
 
-    public Item(string name, Category category, double price, IEnumerable<Property>? properties = null, string? description = null)
+    public Item(string name, Category? category, double price, IEnumerable<Property>? properties = null, string? description = null)
     {
         Name = name;
         Category = category;

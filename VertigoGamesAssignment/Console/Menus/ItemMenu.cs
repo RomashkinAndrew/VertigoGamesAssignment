@@ -5,8 +5,8 @@ namespace VertigoGamesAssignment.Console.Menus;
 internal class ItemMenu : Menu
 {
     protected override string Title => $"[lime][bold]========================{item.Name}========================[/][/]" +
-        $"\nEUR [blue][bold]{item.Price.ToString("0.00", CultureInfo.InvariantCulture)}[/][/]"+
-        $"\n\n{item.Description}";
+        $"\n\n{item.Description}"+
+        $"\n\nEUR [blue][bold]{item.Price.ToString("0.00", CultureInfo.InvariantCulture)}[/][/]";
 
     private readonly Item item;
     private readonly ShoppingCart shoppingCart;
@@ -25,7 +25,7 @@ internal class ItemMenu : Menu
 
         foreach (Property property in shoppingCartItem.Properties)
         {
-            yield return new ChoiceSelectionItem($"{property.Name}: [red][bold]{property.Value}[/][/]", new PropertyMenu($"Select {property.Name}:", property));
+            yield return new ChoiceSelectionItem($"{property.Name}: [red][bold]{property.Value}[/][/]", new PropertyMenu($"Select {property.Name}:", shoppingCart, property));
         }
 
         yield return !shoppingCart.Items.Contains(shoppingCartItem)

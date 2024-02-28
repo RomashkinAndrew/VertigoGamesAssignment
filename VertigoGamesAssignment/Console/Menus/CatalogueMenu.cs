@@ -9,7 +9,7 @@ internal class CatalogueMenu : Menu
     private readonly Category? category;
 
     protected override string Title => category == null ?
-        "[lime][bold]=============Select items from the catalogue=============[/][/]" : 
+        "[lime][bold]=============Select items from the catalogue=============[/][/]" :
         $"[lime][bold]====================={category.Name}=====================[/][/]";
 
     public CatalogueMenu(Catalogue catalogue, ShoppingCart shoppingCart, Category? category = null) : base()
@@ -37,8 +37,8 @@ internal class CatalogueMenu : Menu
                 items.Select(item =>
                 {
                     ShoppingCartItem? shoppingCartItem = shoppingCart.Items.Where(x => x.Item == item).FirstOrDefault();
-                    return new ChoiceSelectionItem($"{item.Name}".PadRight(maxItemNameLength + 3) + 
-                        $"{(shoppingCartItem == null ? "" : $" [red]{shoppingCartItem.Count} in cart {shoppingCartItem.PropertyString}[/]")}", 
+                    return new ChoiceSelectionItem($"{item.Name}".PadRight(maxItemNameLength + 3) +
+                        $"{(shoppingCartItem == null ? "" : $" [red]{shoppingCartItem.Count} in cart {shoppingCartItem.PropertyString}[/]")}",
                         new ItemMenu(shoppingCart, item));
                 })
             );
@@ -49,6 +49,6 @@ internal class CatalogueMenu : Menu
             yield return new CategorySelectionItem("No items in this category");
         }
 
-        yield return new ChoiceSelectionItem(category == null ? "Back to main menu" : $"Back to {category.Name}", NavigationAction.Back);
+        yield return new ChoiceSelectionItem(category == null ? "Back to main menu" : (category.ParentCategory == null ? "Back to catalogue" : $"Back to {category.ParentCategory.Name}"), NavigationAction.Back);
     }
 }

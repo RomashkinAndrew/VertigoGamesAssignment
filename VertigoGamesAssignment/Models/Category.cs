@@ -1,14 +1,13 @@
 ﻿namespace VertigoGamesAssignment.Models;
 
+[Serializable]
 internal class Category
 {
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public Category? ParentCategory { get; set; } = null;
+    public string Name { get; }
+    public Category? ParentCategory { get; }
 
-    public Category(int id, string name, Category? parentCategory = null)
+    public Category(string name, Category? parentCategory = null)
     {
-        Id = id;
         Name = name;
         ParentCategory = parentCategory;
     }
