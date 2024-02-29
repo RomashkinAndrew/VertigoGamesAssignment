@@ -1,23 +1,36 @@
 ﻿using Newtonsoft.Json;
 
 namespace VertigoGamesAssignment.Models;
+
+/// <summary>
+/// Stores information 
+/// </summary>
 internal class ShoppingCart
 {
     readonly List<ShoppingCartItem> items = new();
     public ShoppingCartItem[] Items => items.ToArray();
 
+    /// <summary>
+    /// Adds an item to the cart
+    /// </summary>
     public void Add(ShoppingCartItem item)
     {
         items.Add(item);
         Save();
     }
 
+    /// <summary>
+    /// Removes an item from the cart
+    /// </summary>
     public void Remove(ShoppingCartItem item)
     {
         items.Remove(item);
         Save();
     }
 
+    /// <summary>
+    /// Clears the cart
+    /// </summary>
     public void Clear()
     {
         items.Clear();
@@ -26,6 +39,9 @@ internal class ShoppingCart
 
     #region Serialization/deserialization
 
+    /// <summary>
+    /// A serializable object, representing the shopping cart state
+    /// </summary>
     private class State
     {
         public class Item
@@ -50,6 +66,9 @@ internal class ShoppingCart
         }
     }
 
+    /// <summary>
+    /// Saves state to a file
+    /// </summary>
     public void Save()
     {
         State state = new(
@@ -64,6 +83,9 @@ internal class ShoppingCart
         File.WriteAllText(Constants.StateFileName, json);
     }
 
+    /// <summary>
+    /// Loads state from a file
+    /// </summary>
     public static ShoppingCart Load(Catalogue catalogue)
     {
         ShoppingCart shoppingCart = new();

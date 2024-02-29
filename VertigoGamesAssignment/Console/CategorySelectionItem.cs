@@ -1,5 +1,8 @@
 ﻿namespace VertigoGamesAssignment.Console;
 
+/// <summary>
+/// Menu item representing a category
+/// </summary>
 internal class CategorySelectionItem:SelectionItem
 {
     public ChoiceSelectionItem[] Choices { get; private set; }

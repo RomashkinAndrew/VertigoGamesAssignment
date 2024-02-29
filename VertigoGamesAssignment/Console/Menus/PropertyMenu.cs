@@ -1,7 +1,9 @@
 ﻿using VertigoGamesAssignment.Models;
 
 namespace VertigoGamesAssignment.Console.Menus;
-
+/// <summary>
+/// Property selection
+/// </summary>
 internal class PropertyMenu : Menu
 {
     protected override string Title => $"[lime][bold]=========================={title}==========================[/][/]";

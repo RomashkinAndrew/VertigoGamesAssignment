@@ -2,6 +2,9 @@
 using VertigoGamesAssignment.Models;
 
 namespace VertigoGamesAssignment.Console.Menus;
+/// <summary>
+/// Menu with information about an item
+/// </summary>
 internal class ItemMenu : Menu
 {
     protected override string Title => $"[lime][bold]========================{item.Name}========================[/][/]" +
@@ -16,7 +19,7 @@ internal class ItemMenu : Menu
     {
         this.shoppingCart = shoppingCart;
         this.item = item;
-        shoppingCartItem = shoppingCart.Items.Where(x => x.Item == item).FirstOrDefault() ?? new ShoppingCartItem(item);
+        shoppingCartItem = shoppingCart.Items.Where(i => i.Item == item).FirstOrDefault() ?? new ShoppingCartItem(item);
     }
 
     protected override IEnumerable<SelectionItem> GetSelectionChoices()

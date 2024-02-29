@@ -2,6 +2,9 @@
 
 namespace VertigoGamesAssignment.Models;
 
+/// <summary>
+/// Stores information about categories and items
+/// </summary>
 internal class Catalogue
 {
     public Category[] Categories { get; }
@@ -14,6 +17,9 @@ internal class Catalogue
         Items = items;
     }
 
+    /// <summary>
+    /// Loads catalogue from file
+    /// </summary>
     public static Catalogue Load()
     {
         Catalogue? catalogue = JsonConvert.DeserializeObject<Catalogue>(File.ReadAllText(Constants.CatalogueFileName), new JsonSerializerSettings { PreserveReferencesHandling = PreserveReferencesHandling.Objects });

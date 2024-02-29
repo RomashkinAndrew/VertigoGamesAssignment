@@ -107,6 +107,150 @@
             ]
         }, {
             "$id": "14",
+            "Name": "Car Coat",
+            "Category": {
+                "$ref": "4"
+            },
+            "Description": "Regular-fit car coat in soft twill with a comfortable, classic silhouette. Collar with collar strap. Concealed buttons at front, diagonal welt front pockets, and a welt inner pocket. Long sleeves with tab and button at cuffs. Lined.",
+            "Price": 111.0,
+            "Properties": [{
+                    "Name": "Size",
+                    "PossibleValues": ["S", "M", "L", "XL"]
+                }, {
+                    "Name": "Color",
+                    "PossibleValues": ["Red", "Blue", "Green"]
+                }
+            ]
+        }, {
+            "$id": "15",
+            "Name": "Denim Jacket",
+            "Category": {
+                "$ref": "4"
+            },
+            "Description": "Relaxed-fit jacket in non-stretch denim. Collar, metal buttons at front, chest pockets with flap and button, and welt side pockets. Long sleeves with button at cuffs. Adjustable tab at sides with buttons.",
+            "Price": 60.0,
+            "Properties": [{
+                    "Name": "Size",
+                    "PossibleValues": ["S", "M", "L", "XL"]
+                }, {
+                    "Name": "Color",
+                    "PossibleValues": ["Red", "Blue", "Black"]
+                }
+            ]
+        }, {
+            "$id": "16",
+            "Name": "Windbreaker",
+            "Category": {
+                "$ref": "4"
+            },
+            "Description": "Windbreaker in windproof, water-repellent nylon. Lined hood with elasticized drawstring. Zipper at front, long sleeves with covered elastic at cuffs, and a concealed, elasticized drawstring at hem. Diagonal side pockets with hook-loop fastener and an inner pocket with snap fastener. Lined.",
+            "Price": 77.0,
+            "Properties": [{
+                    "Name": "Size",
+                    "PossibleValues": ["S", "M", "L", "XL"]
+                }, {
+                    "Name": "Color",
+                    "PossibleValues": ["Red", "Blue", "Green"]
+                }
+            ]
+        }, {
+            "$id": "17",
+            "Name": "Baseball Jacket",
+            "Category": {
+                "$ref": "4"
+            },
+            "Description": "Baseball jacket in satin. Stand-up collar, snap fasteners at front, and long sleeves. Diagonal welt front pockets, an inner pocket with snap fastener, and ribbing at collar, cuffs, and hem. Lined.",
+            "Price": 55.0,
+            "Properties": [{
+                    "Name": "Size",
+                    "PossibleValues": ["S", "M", "L", "XL"]
+                }, {
+                    "Name": "Color",
+                    "PossibleValues": ["Red", "Blue", "Green"]
+                }
+            ]
+        }, {
+            "$id": "18",
+            "Name": "Vest",
+            "Category": {
+                "$ref": "4"
+            },
+            "Description": "Regular-fit, lightly padded vest in thick woven fabric with comfortable, classic silhouette. Stand-up collar, diagonal front pockets with zipper, and an inner pocket with snap fastener. Elasticized binding at armholes and hem. Fleece lined.",
+            "Price": 35.0,
+            "Properties": [{
+                    "Name": "Size",
+                    "PossibleValues": ["S", "M", "L", "XL"]
+                }, {
+                    "Name": "Color",
+                    "PossibleValues": ["Red", "Blue", "Green"]
+                }
+            ]
+        }, {
+            "$id": "19",
+            "Name": "Bomber",
+            "Category": {
+                "$ref": "4"
+            },
+            "Description": "Bomber jacket in felted fabric with sleeves in coated fabric. Drawstring hood in jersey, snap fasteners at front, welt front pockets, and an inner pocket with snap fastener. Striped ribbing at cuffs and hem. Quilted lining.",
+            "Price": 119.0,
+            "Properties": [{
+                    "Name": "Size",
+                    "PossibleValues": ["S", "M", "L", "XL"]
+                }, {
+                    "Name": "Color",
+                    "PossibleValues": ["Red", "Blue", "Green"]
+                }
+            ]
+        }, {
+            "$id": "20",
+            "Name": "Twill Shacket",
+            "Category": {
+                "$ref": "4"
+            },
+            "Description": "Regular-fit shirt jacket in thick cotton twill with a comfortable, classic silhouette. Collar, buttons at front, an open chest pocket, and long sleeves. Straight-cut hem. Unlined.",
+            "Price": 41.50,
+            "Properties": [{
+                    "Name": "Size",
+                    "PossibleValues": ["S", "M", "L", "XL"]
+                }, {
+                    "Name": "Color",
+                    "PossibleValues": ["Red", "Blue", "Green"]
+                }
+            ]
+        }, {
+            "$id": "21",
+            "Name": "Ski Anorak",
+            "Category": {
+                "$ref": "4"
+            },
+            "Description": "Loose-fit, padded ski anorak in StormMove™ functional fabric for breathability and protection from wind and snow. Hood with elasticized drawstring at back to help keep it in place. Half-zip with anti-chafe chin guard. Chest pocket with zipper and a goggle cloth, handwarmer pockets with zipper, and a sleeve pocket with zipper for easy access to lift pass. Dropped shoulders, long sleeves with adjustable hook-loop tab at cuffs, and jersey inner ribbing with thumbhole. Slit at one side with zipper and an elasticized drawstring at hem. Fully taped seams, water column rating of 10,000 mm., and breathability 10,000 g/m2/24 h. Made with ThermoMove™ technology, designed to be lightweight, breathable, and keep you warm when the temperature drops.",
+            "Price": 199.0,
+            "Properties": [{
+                    "Name": "Size",
+                    "PossibleValues": ["S", "M", "L", "XL"]
+                }, {
+                    "Name": "Color",
+                    "PossibleValues": ["Red", "Blue", "Green"]
+                }
+            ]
+        }, {
+            "$id": "22",
+            "Name": "Coated Jacket",
+            "Category": {
+                "$ref": "4"
+            },
+            "Description": "Regular-fit jacket in coated, woven fabric with a comfortable, classic silhouette. Collar, zipper at front, welt front pockets, and an inner pocket with snap fastener. Long sleeves and wide ribbing at cuffs and hem.",
+            "Price": 124.0,
+            "Properties": [{
+                    "Name": "Size",
+                    "PossibleValues": ["S", "M", "L", "XL"]
+                }, {
+                    "Name": "Color",
+                    "PossibleValues": ["Red", "Blue", "Green"]
+                }
+            ]
+        }, {
+            "$id": "23",
             "Name": "Hoodie",
             "Category": {
                 "$ref": "5"
@@ -122,7 +266,7 @@
                 }
             ]
         }, {
-            "$id": "15",
+            "$id": "24",
             "Name": "Cotton Dress",
             "Category": {
                 "$ref": "6"

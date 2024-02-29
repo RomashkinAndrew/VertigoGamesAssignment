@@ -2,6 +2,9 @@
 using VertigoGamesAssignment.Models;
 
 namespace VertigoGamesAssignment.Console.Menus;
+/// <summary>
+/// Menu with an item list
+/// </summary>
 internal class CatalogueMenu : Menu
 {
     private readonly Catalogue catalogue;
@@ -21,22 +24,22 @@ internal class CatalogueMenu : Menu
 
     protected override IEnumerable<SelectionItem> GetSelectionChoices()
     {
-        Category[] subcategories = catalogue.Categories.Where(x => x.ParentCategory == category).ToArray();
+        Category[] subcategories = catalogue.Categories.Where(c => c.ParentCategory == category).ToArray();
         if (subcategories.Length != 0)
         {
             yield return new CategorySelectionItem("Subcategories",
                 subcategories.Select(subcategory => new ChoiceSelectionItem(subcategory.Name, new CatalogueMenu(catalogue, shoppingCart, subcategory))));
         }
 
-        Item[] items = catalogue.Items.Where(x => x.Category == category).ToArray();
+        Item[] items = catalogue.Items.Where(c => c.Category == category).ToArray();
         if (items.Length != 0)
         {
-            int maxItemNameLength = items.Select(x => x.Name.Length).Max();
+            int maxItemNameLength = items.Select(i => i.Name.Length).Max();
 
             yield return new CategorySelectionItem("Items",
                 items.Select(item =>
                 {
-                    ShoppingCartItem? shoppingCartItem = shoppingCart.Items.Where(x => x.Item == item).FirstOrDefault();
+                    ShoppingCartItem? shoppingCartItem = shoppingCart.Items.Where(i => i.Item == item).FirstOrDefault();
                     return new ChoiceSelectionItem($"{item.Name}".PadRight(maxItemNameLength + 3) +
                         $"{(shoppingCartItem == null ? "" : $" [red]{shoppingCartItem.Count} in cart {shoppingCartItem.PropertyString}[/]")}",
                         new ItemMenu(shoppingCart, item));

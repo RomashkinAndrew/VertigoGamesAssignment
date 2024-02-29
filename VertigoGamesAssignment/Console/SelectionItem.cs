@@ -1,5 +1,8 @@
 ﻿namespace VertigoGamesAssignment.Console;
 
+/// <summary>
+/// Base class for a menu item
+/// </summary>
 internal abstract class SelectionItem
 {
     public string Text { get; private set; }

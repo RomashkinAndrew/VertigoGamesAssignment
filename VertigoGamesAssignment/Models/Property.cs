@@ -1,5 +1,8 @@
 ﻿namespace VertigoGamesAssignment.Models;
 
+/// <summary>
+/// Represents item property (color, size, etc.)
+/// </summary>
 internal class Property
 {
     public string Name { get; private set; }

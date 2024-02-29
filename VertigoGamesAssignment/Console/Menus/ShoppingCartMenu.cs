@@ -3,7 +3,9 @@ using System.Globalization;
 using VertigoGamesAssignment.Models;
 
 namespace VertigoGamesAssignment.Console.Menus;
-
+/// <summary>
+/// Shopping cart overview
+/// </summary>
 internal class ShoppingCartMenu : Menu
 {
     protected override string Title => 
@@ -22,7 +24,7 @@ internal class ShoppingCartMenu : Menu
     {
         if (shoppingCart.Items.Length != 0)
         {
-            int maxItemNameLength = shoppingCart.Items.Select(x => x.Item.Name.Length).Max();
+            int maxItemNameLength = shoppingCart.Items.Select(i => i.Item.Name.Length).Max();
 
             yield return new CategorySelectionItem("Items in your cart",
                 shoppingCart.Items.Select(item => new ChoiceSelectionItem($"{item.Item.Name}".PadRight(maxItemNameLength+3)+

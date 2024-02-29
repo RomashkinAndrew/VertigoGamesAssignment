@@ -1,12 +1,17 @@
 ﻿using Spectre.Console;
 
 namespace VertigoGamesAssignment.Console;
-
+/// <summary>
+/// Basic class for a menu
+/// </summary>
 internal abstract class Menu
 {
     protected abstract string Title { get; }
     protected abstract IEnumerable<SelectionItem> GetSelectionChoices();
 
+    /// <summary>
+    /// Shows current menu
+    /// </summary>
     public void Show()
     {
         SelectionPrompt<SelectionItem> prompt = new();
@@ -43,14 +48,23 @@ internal abstract class Menu
 
     #region Navigation
 
+    /// <summary>
+    /// Stores menu hierarchy
+    /// </summary>
     static readonly List<Menu> breadCrumbs = new();
 
+    /// <summary>
+    /// Move to the next menu
+    /// </summary>
     void MoveTo(Menu menu)
     {
         breadCrumbs.Add(this);
         menu.Show();
     }
 
+    /// <summary>
+    /// Move to the previous menu
+    /// </summary>
     protected static void Back()
     {
         if (breadCrumbs.Count == 0)

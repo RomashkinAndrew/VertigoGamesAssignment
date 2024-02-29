@@ -1,6 +1,8 @@
 ﻿namespace VertigoGamesAssignment.Models;
 
-[Serializable]
+/// <summary>
+/// Represents an item from the catalogue
+/// </summary>
 internal class Item
 {
     public string Name { get; }

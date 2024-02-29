@@ -1,6 +1,9 @@
 ﻿using VertigoGamesAssignment.Models;
 
 namespace VertigoGamesAssignment.Console.Menus;
+/// <summary>
+/// Root menu
+/// </summary>
 internal class MainMenu : Menu
 {
     private readonly Catalogue catalogue;

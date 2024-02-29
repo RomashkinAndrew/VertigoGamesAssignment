@@ -5,6 +5,9 @@ using VertigoGamesAssignment.Models;
 namespace VertigoGamesAssignment.Console.Menus;
 internal static class MiscMenus
 {
+    /// <summary>
+    /// Exit prompt
+    /// </summary>
     public static void Exit()
     {
         bool exit = AnsiConsole.Confirm("[yellow]Are you sure you want to exit?[/]");
@@ -18,6 +21,9 @@ internal static class MiscMenus
         }
     }
 
+    /// <summary>
+    /// Item count adjustment
+    /// </summary>
     public static void ItemCount(ShoppingCartItem item)
     {
         AnsiConsole.Clear();
@@ -47,6 +53,9 @@ internal static class MiscMenus
         }
     }
 
+    /// <summary>
+    /// Checkout mockup
+    /// </summary>
     public static bool Checkout(ShoppingCart shoppingCart)
     {
         AnsiConsole.MarkupLine($"[lime][bold]==========================Your order:==========================[/][/]");
